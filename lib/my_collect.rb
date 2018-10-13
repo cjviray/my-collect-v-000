@@ -1,9 +1,10 @@
 def my_collect(array)
-  i = 0 
-  language = []
+  i = 0
+  collection = []
   
-  my_collect(language) do |name|
-    name.split(" ").first
-end 
-  language
+  while i < array.length
+    collection << yield(array[i])
+    i += 1
+  end
+  collection
 end 
